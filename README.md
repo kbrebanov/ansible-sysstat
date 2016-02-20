@@ -1,6 +1,8 @@
 sysstat
 =======
 
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-sysstat.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-sysstat)
+
 Installs sysstat utilities.
 
 Requirements
