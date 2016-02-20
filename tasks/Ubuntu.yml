@@ -1,0 +1,13 @@
+---
+# tasks file for sysstat (Ubuntu specific)
+
+- name: Install sysstat packages
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - "{{ sysstat_packages }}"
+  tags:
+    - sysstat

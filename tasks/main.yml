@@ -1,2 +1,17 @@
 ---
 # tasks file for sysstat
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags:
+    - sysstat
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags:
+    - sysstat
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags:
+    - sysstat
